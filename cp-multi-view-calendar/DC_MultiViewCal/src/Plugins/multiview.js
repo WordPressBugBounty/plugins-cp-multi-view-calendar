@@ -156,7 +156,7 @@ function initMultiViewCal(container,calendarId,config)
                   '              <div><span title="iCal" class="showicalview">iCal</span></div>'+
                   '          </div>':'')+
                   ((config.viewNavigation)?
-                  '<div class="mvSelectNavigation"><select>'+
+                  '<div class="mvSelectNavigation"><label for="display-select" style="position: absolute;width: 1px;height: 1px;margin: -1px;padding: 0;overflow: hidden;clip: rect(0, 0, 0, 0);border: 0;">Select a Calendar Display</label><select>'+
                   ((config.viewDay)?'<option value="day" '+((config.view=="day")?'selected':'')+'>'+i18n.dcmvcal.sday+'</option>':'')+
                   ((config.viewNDays)?'<option value="nDays" '+((config.view=="nDays")?'selected':'')+'>'+i18n.dcmvcal.ndays+'</option>':'')+
                   ((config.viewWeek)?'<option value="week" '+((config.view=="week")?'selected':'')+'>'+i18n.dcmvcal.week+'</option>':'')+
