@@ -4,7 +4,7 @@ Donate link: https://wordpress.dwbooster.com/calendars/cp-multi-view-calendar
 Tags: calendar,calendars,event calendar,event,event manager
 Requires at least: 3.0.5
 Tested up to: 6.7
-Stable tag: 1.4.30
+Stable tag: 1.4.31
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -252,6 +252,9 @@ The following area some sample views. You can apply or mix configurations to get
 
 
 == Changelog ==
+
+= 1.4.31 =
+* Added Serbian-latin translation, sr-SR
 
 = 1.4.30 =
 * Compatible with WP 6.7
@@ -956,5 +959,5 @@ The following area some sample views. You can apply or mix configurations to get
 
 == Upgrade Notice ==
 
-= 1.4.30 =
-* Compatible with WP 6.7
+= 1.4.31 =
+* Added Serbian-latin translation, sr-SR
