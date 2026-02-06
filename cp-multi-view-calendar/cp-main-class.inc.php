@@ -247,8 +247,7 @@ class CP_MultiViewCalendar extends CP_BaseClass {
             $langscript = plugins_url('/DC_MultiViewCal/language/multiview_lang_en_GB.js', __FILE__);
 
 
-        wp_register_script('cpmvc-common', plugins_url('/DC_MultiViewCal/src/Plugins/Common.js', __FILE__));
-        wp_register_script('cpmvc-underscore', plugins_url('/DC_MultiViewCal/src/Plugins/underscore.js', __FILE__));
+        wp_register_script('cpmvc-common', plugins_url('/DC_MultiViewCal/src/Plugins/Common.js', __FILE__));        
         wp_register_script('cpmvc-rrule', plugins_url('/DC_MultiViewCal/src/Plugins/rrule.js', __FILE__));
 
         wp_register_script('cpmvc-lang', $langscript);
@@ -269,7 +268,7 @@ class CP_MultiViewCalendar extends CP_BaseClass {
                            'cpmvc-multiview'
                            );
         if (!isset($_GET["fl_builder"]))
-            $dependencies[] = 'cpmvc-underscore'; 
+            $dependencies[] = 'underscore'; 
         
         wp_enqueue_script( 'cpmvc-publicjs', plugins_url('/DC_MultiViewCal/src/Plugins/multiview.public.js', __FILE__),
                            $dependencies,
@@ -392,8 +391,7 @@ class CP_MultiViewCalendar extends CP_BaseClass {
             $langscript = plugins_url('/DC_MultiViewCal/language/multiview_lang_en_GB.js', __FILE__);
 
 
-        wp_register_script('cpmvc-common', plugins_url('/DC_MultiViewCal/src/Plugins/Common.js', __FILE__));
-        wp_register_script('cpmvc-underscore', plugins_url('/DC_MultiViewCal/src/Plugins/underscore.js', __FILE__));
+        wp_register_script('cpmvc-common', plugins_url('/DC_MultiViewCal/src/Plugins/Common.js', __FILE__));        
         wp_register_script('cpmvc-rrule', plugins_url('/DC_MultiViewCal/src/Plugins/rrule.js', __FILE__));
 
         wp_register_script('cpmvc-lang', $langscript);
@@ -414,7 +412,7 @@ class CP_MultiViewCalendar extends CP_BaseClass {
                            'cpmvc-multiview'
                            );
         if (!isset($_GET["fl_builder"]))
-            $dependencies[] = 'cpmvc-underscore'; 
+            $dependencies[] = 'underscore';  // $dependencies[] = 'cpmvc-underscore'; 
         
         wp_enqueue_script( 'cpmvc-publicjs', plugins_url('/DC_MultiViewCal/src/Plugins/multiview.public.js', __FILE__),
                            $dependencies,
@@ -446,11 +444,11 @@ class CP_MultiViewCalendar extends CP_BaseClass {
     /* Code for the admin area */
 
     public function plugin_page_links($links) {
-        $customAdjustments_link = '<a href="https://wordpress.dwbooster.com/calendars/cp-multi-view-calendar#download">'.__('Upgrade To Premium').'</a>';
+        $customAdjustments_link = '<a href="https://wordpress.dwbooster.com/calendars/cp-multi-view-calendar#download">'.__('Upgrade To Premium', 'cp-multi-view-calendar').'</a>';
     	array_unshift($links, $customAdjustments_link);
-        $settings_link = '<a href="admin.php?page='.$this->menu_parameter.'_manage">'.__('Settings').'</a>';
+        $settings_link = '<a href="admin.php?page='.$this->menu_parameter.'_manage">'.__('Settings', 'cp-multi-view-calendar').'</a>';
     	array_unshift($links, $settings_link);
-    	$help_link = '<a href="'.$this->plugin_URL.'?documentation=open">'.__('Help').'</a>';
+    	$help_link = '<a href="'.$this->plugin_URL.'?documentation=open">'.__('Help', 'cp-multi-view-calendar').'</a>';
     	array_unshift($links, $help_link);
     	return $links;
     }
@@ -508,10 +506,10 @@ class CP_MultiViewCalendar extends CP_BaseClass {
                           '<td>'.esc_html($item->title).'</td>'.
                           '<td nowrap style="color:#338833;font-weight:bold;">[CPMV_CALENDAR view="'.intval($item->id).'"]</td>'.
                           '<td>'.
-                          '<a class="button" style="" href="javascript:'.esc_attr($this->prefix).'Admin.sendToEditor('.intval($item->calid).','.intval($item->id).');">'.esc_html(__('Publish')).'</a> &nbsp; '.
-                          '<a class="button" href="javascript:'.esc_attr($this->prefix).'previewCalendarId('.intval($item->id).');">'.esc_html(__('Preview')).'</a> &nbsp; '.
-                          '<a class="button" href="javascript:'.esc_attr($this->prefix).esc_js($seed).'editCalendar'.intval($item->id).'();">'.esc_html(__('Edit')).'</a> &nbsp; '.
-                          '<a class="button" href="javascript:'.esc_attr($this->prefix).'deleteCalendar('.intval($item->id).');">'.esc_html(__('Delete')).'</a>'.
+                          '<a class="button" style="" href="javascript:'.esc_attr($this->prefix).'Admin.sendToEditor('.intval($item->calid).','.intval($item->id).');">'.esc_html(__('Publish', 'cp-multi-view-calendar')).'</a> &nbsp; '.
+                          '<a class="button" href="javascript:'.esc_attr($this->prefix).'previewCalendarId('.intval($item->id).');">'.esc_html(__('Preview', 'cp-multi-view-calendar')).'</a> &nbsp; '.
+                          '<a class="button" href="javascript:'.esc_attr($this->prefix).esc_js($seed).'editCalendar'.intval($item->id).'();">'.esc_html(__('Edit', 'cp-multi-view-calendar')).'</a> &nbsp; '.
+                          '<a class="button" href="javascript:'.esc_attr($this->prefix).'deleteCalendar('.intval($item->id).');">'.esc_html(__('Delete', 'cp-multi-view-calendar')).'</a>'.
                           '</td>'.
                           '</tr>';
                  }
@@ -555,7 +553,7 @@ class CP_MultiViewCalendar extends CP_BaseClass {
             <?php
         } else {
             echo '<strong>';
-            echo esc_html(__('Start creating a new calendar view with the following button:'));
+            echo esc_html(__('Start creating a new calendar view with the following button:', 'cp-multi-view-calendar'));
             echo '</strong>';
         }
     }
@@ -707,8 +705,7 @@ is located into the "Admin Calendar Data" for each calendar.</p>
                 $langscript = plugins_url('/DC_MultiViewCal/language/multiview_lang_en_GB.js', __FILE__);
             
             
-            wp_register_script('cpmvc-common', plugins_url('/DC_MultiViewCal/src/Plugins/Common.js', __FILE__));
-            wp_register_script('cpmvc-underscore', plugins_url('/DC_MultiViewCal/src/Plugins/underscore.js', __FILE__));
+            wp_register_script('cpmvc-common', plugins_url('/DC_MultiViewCal/src/Plugins/Common.js', __FILE__));            
             wp_register_script('cpmvc-rrule', plugins_url('/DC_MultiViewCal/src/Plugins/rrule.js', __FILE__));
             
             wp_register_script('cpmvc-lang', $langscript);
@@ -729,7 +726,7 @@ is located into the "Admin Calendar Data" for each calendar.</p>
                                'cpmvc-multiview'
                                );
             if (!isset($_GET["fl_builder"]))
-                $dependencies[] = 'cpmvc-underscore'; 
+                $dependencies[] = 'underscore'; 
             
             wp_enqueue_script( 'cpmvc-publicjs', plugins_url('/DC_MultiViewCal/src/Plugins/multiview.public.js', __FILE__),
                                $dependencies,

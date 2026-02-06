@@ -59,12 +59,12 @@ $mycalendarrows = $wpdb->get_results( $wpdb->prepare( 'SELECT * FROM '.$wpdb->pr
 
    <div id="tabs">
 			<ul>
-				<li class="ui-state-active"><a href="#tabs-1"><?php echo esc_html(_( 'ADD/EDIT CALENDAR EVENTS' )); ?></a></li>
-                <li><a href="#tabs-4"><?php echo esc_html(_( 'OLD DATA CLEANING' ))?></a></li>
-				<li><a href="#tabs-2"><?php echo esc_html(_( 'ICAL FEATURES' ))?></a></li>
-				<li><a href="#tabs-3"><?php echo esc_html(_( 'EVENT CATEGORIES' ))?></a></li>
-                <li><a href="#tabs-5"><?php echo esc_html(_( 'EMAIL NOTIFICATIONS' ))?></a></li>
-                <li><a href="#tabs-6"><?php echo esc_html(_( 'PUBLISH' ))?></a></li>
+				<li class="ui-state-active"><a href="#tabs-1"><?php echo esc_html(__( 'ADD/EDIT CALENDAR EVENTS', 'cp-multi-view-calendar' )); ?></a></li>
+                <li><a href="#tabs-4"><?php echo esc_html(__( 'OLD DATA CLEANING', 'cp-multi-view-calendar' ))?></a></li>
+				<li><a href="#tabs-2"><?php echo esc_html(__( 'ICAL FEATURES', 'cp-multi-view-calendar' ))?></a></li>
+				<li><a href="#tabs-3"><?php echo esc_html(__( 'EVENT CATEGORIES', 'cp-multi-view-calendar' ))?></a></li>
+                <li><a href="#tabs-5"><?php echo esc_html(__( 'EMAIL NOTIFICATIONS', 'cp-multi-view-calendar' ))?></a></li>
+                <li><a href="#tabs-6"><?php echo esc_html(__( 'PUBLISH', 'cp-multi-view-calendar' ))?></a></li>
 			</ul>
 			<div id="tabs-1">
  
@@ -207,7 +207,7 @@ $mycalendarrows = $wpdb->get_results( $wpdb->prepare( 'SELECT * FROM '.$wpdb->pr
           
 				  ?>
 				  </div>
-				  <input type="button" disabled class="sbtn submitno" id="btnSavelist" value="<?php echo esc_attr(_( 'SAVE' )); ?>"/>
+				  <input type="button" disabled class="sbtn submitno" id="btnSavelist" value="<?php echo esc_attr(__( 'SAVE', 'cp-multi-view-calendar' )); ?>"/>
 			</div>
             
 
@@ -236,7 +236,7 @@ $mycalendarrows = $wpdb->get_results( $wpdb->prepare( 'SELECT * FROM '.$wpdb->pr
                 
                 <p><b>Note:</b> 0 months and 0 days old means that all events older than the current date will be deleted.</p>
                
-                <input type="button" class="sbtn submitno" id="btnSaveDataDeletion" value="<?php echo esc_attr(_( 'UPDATE SETTINGS' )); ?>"/>
+                <input type="button" class="sbtn submitno" id="btnSaveDataDeletion" value="<?php echo esc_attr(__( 'UPDATE SETTINGS', 'cp-multi-view-calendar' )); ?>"/>
             
 			</div>
             

@@ -90,8 +90,7 @@ else
     
 
 
-        wp_register_script('cpmvc-common', plugins_url('../DC_MultiViewCal/src/Plugins/Common.js', __FILE__));
-        wp_register_script('cpmvc-underscore', plugins_url('../DC_MultiViewCal/src/Plugins/underscore.js', __FILE__));
+        wp_register_script('cpmvc-common', plugins_url('../DC_MultiViewCal/src/Plugins/Common.js', __FILE__));        
         wp_register_script('cpmvc-rrule', plugins_url('../DC_MultiViewCal/src/Plugins/rrule.js', __FILE__));
 
         wp_register_script('cpmvc-lang', $langscript);
@@ -135,7 +134,7 @@ else
                            'cpmvc-multiview'
                            );
         if (!isset($_GET["fl_builder"]))
-            $dependencies[] = 'cpmvc-underscore'; 
+            $dependencies[] = 'underscore';
         
         wp_enqueue_script( 'cpmvc-publicjsedit', plugins_url('../DC_MultiViewCal/src/Plugins/jquery.cleditor.js', __FILE__),
                            $dependencies,

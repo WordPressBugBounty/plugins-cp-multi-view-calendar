@@ -1,110 +1,116 @@
-=== CP Multi View Event Calendar ===
+=== CP Multi View Events Calendar ===
 Contributors: codepeople
 Donate link: https://wordpress.dwbooster.com/calendars/cp-multi-view-calendar
 Tags: calendar,calendars,event calendar,event,event manager
 Requires at least: 3.0.5
-Tested up to: 6.8
-Stable tag: 1.4.32
-License: GPLv2 or later
+Tested up to: 6.9
+Stable tag: 1.4.34
+License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Event calendar for WordPress websites that features multiple visualization modes.
+A powerful and flexible WordPress event calendar plugin that lets you display your events in multiple calendar views, just like Google Calendar.
 
 == Description ==
 
-The Calendar Event Multi View is an **event calendar** for WordPress websites that features multiple visualization modes and multiple predefined styles.
+**CP Multi View Events Calendar** is a professional and easy-to-use **event calendar plugin for WordPress** that allows you to display, organize, and manage events in multiple interactive views — including month, week, day, and multi-month layouts.
 
-= Features: =
+This all-in-one **calendar and event manager** helps you create visually stunning calendars for your website, with customizable styles, colors, and display options. Whether you need a simple events list or a full-featured scheduling solution, CP Multi View Events Calendar gives you the flexibility to do it all.
 
-* Classic month view (like Google Calendar)
-* Multi-month view (show a configurable number of months at once)
-* Day view
-* Week view
-* Multiple configurations for the views, the same view can be used in a very different way
-* Allows multiple views for the same event calendar on the same page
-* Configurable start day of the week
-* Can be setup to edit the events from the public website
-* You can select which button show/display (ex: navigation buttons, refresh button, others...)
-* The event calendar information can be displayed in many ways: Title + tooltip on mouse over or Title + tooltip on mouse click
-* Events can have a location and an extended rich text description
-* Multiple selectable colors to highlight events in the calendar
-* Events can be linked to other pages.
-* Can display images directly on the calendar cells
-* Can be easily published in a page or post by using its shortcode or visual publish button
-* Can be setup to use a 12 or 24 hour clock.
-* Can be setup to display only the weekdays needed
-* Fast Ajax load for the events data
-* Recurring events / repeat events like Google Calendar
+**Perfect for:**  
+- Businesses managing multiple events  
+- Schools, clubs, and communities  
+- Bloggers and content creators  
+- Anyone who needs a customizable, interactive event calendar
 
-You can see 20 sample visualization modes and an online demo at: https://wordpress.dwbooster.com/calendars/cp-multi-view-calendar
+👉 **Live demo and examples:**  
+[View 20 calendar demos and styles](https://wordpress.dwbooster.com/calendars/cp-multi-view-calendar)
 
-**Languages Included in the Calendar**
+---
 
-* Czech
-* Danish
-* Dutch
-* English
-* French
-* German
-* Italian
-* Norwegian
-* Polish
-* Portuguese
-* Russian
-* Slovak
-* Slovenian
-* Spanish
+### ✨ Key Features
 
-If your language is not listed here feel free to open a support ticket and it will be added asap.
+* Multiple calendar views — Month, Week, Day, and Multi-Month (similar to Google Calendar)
+* Fully responsive and mobile-friendly event calendars
+* Support for recurring / repeating events
+* Fast AJAX loading for smooth calendar navigation
+* Editable events from the front end or admin area
+* Multiple event calendars and views on the same page
+* Customizable colors, fonts, and calendar styles
+* Tooltips for event details (on hover or click)
+* Event locations, rich text descriptions, and images
+* Links from calendar events to custom URLs or pages
+* 12- or 24-hour clock formats
+* Option to display only selected weekdays
+* GDPR compliant — no personal data stored unless entered manually
+* Import / export events with iCal (.ics) format (available in Platinum version)
 
-**Update note**
+---
 
-New: The latest update features a new interface for easily editing a previously inserted event calendar views and preview buttons for a faster verification of how they will look in the website.
+### 🌍 Available Languages
 
-= Import / Export events using iCal = 
+Czech, Danish, Dutch, English, French, German, Italian, Norwegian, Polish, Portuguese, Russian, Slovak, Slovenian, Spanish.  
 
-The option to import events from iCal files and export the calendar events to iCal files is currently available in the **Platinum version** of the plugin (commercial version). The iCal / .ics files supported are compatible with the Google Calendar iCal format.
+Don’t see your language? [Open a support ticket](https://wordpress.dwbooster.com/support) and we’ll add it quickly!
 
+---
+
+### 🆕 Latest Update
+
+**New:** A refreshed interface for easier editing of inserted event calendar views, plus instant preview buttons for faster verification of calendar layouts on your website.
+
+---
+
+### 🔁 Import / Export Events (iCal Support)
+
+You can easily **import and export calendar events** using the iCal (.ics) format — fully compatible with Google Calendar.  
+*This feature is available in the [Platinum version](https://wordpress.dwbooster.com/calendars/cp-multi-view-calendar).*
+
+---
 == Installation ==
 
 To install **Calendar Event Multi View**, follow these steps:
 
-1.	Download and unzip the plugin
-2.	Upload the entire cp-multi-view-calendar/ directory to the /wp-content/plugins/ directory
-3.	Activate the plugin through the Plugins menu in WordPress
-4.	Configure the settings at the administration menu >> CP Multi View Event Calendar. 
-5.	To insert the calendar form into some content or post use the icon that will appear when editing contents
+1. Download and unzip the plugin.  
+2. Upload the `cp-multi-view-calendar/` folder to `/wp-content/plugins/`.  
+3. Activate **CP Multi View Events Calendar** from the Plugins menu.  
+4. Configure your calendar settings via **Admin Menu → CP Multi View Event Calendar**.  
+5. Insert your event calendar into a page or post using the provided shortcode or visual editor button.
 
 
 == Frequently Asked Questions ==
 
-= Q: Is the plugin ready to comply the European GDPR regulation? =
+= Where do I report security bugs found in this plugin? =
 
-A: Yes, plugin is prepared to comply the European GDPR. 
+Please report security bugs found in the source code of the CP Multi View Event Calendar plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/155b15e6-6c0e-4865-a42e-76b1efa47311). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
 
-The plugin doesn't store personal data, IP address or cookies from the user unless explicitly entered as part of the text of an event in the calendar.
+= 🛡️ Is the plugin GDPR compliant? =  
 
-= Q: What means each field in the settings area? =
+Yes. The calendar plugin does not collect or store personal data, IP addresses, or cookies — unless added manually within an event description.
 
-A: The product's page contains detailed information about each settings field and customization:
+= What means each field in the settings area? =
+
+The product's page contains detailed information about each settings field and customization:
 
 https://wordpress.dwbooster.com/calendars/cp-multi-view-calendar
 
-= Q: How events are added into the event calendar? =
+= 🎨 Can I customize how the calendar looks? =  
 
-A: In the dashboard area go to "WordPress administration menu >> CP Multiview Event Calendar" and click the button "Admin Calendar Data" that leads to a page where you can add/edit/delete events.
+Absolutely. You can use custom CSS, choose predefined themes, or tweak display options for buttons, colors, start day of the week, and more.  
 
-The events edition on the public event calendar can be also (optionally) enabled, that way the website visitors can edit events directly in the event calendar without having to access through the dashboard.
+= ⚙️ How do I add events to the calendar? =  
 
-= Q: How show the entire title on month,week and day view? =
+Go to **WordPress Dashboard → CP Multi View Event Calendar → Admin Calendar Data**. From there you can add, edit, or delete events.  
+Optionally, enable front-end editing to let users add or edit events directly from the public event calendar.
 
-A: Add this CSS rule into the "Customization area >> Add Custom Styles" (at the bottom of the page that contains the list of calendars):
+= How show the entire title on month,week and day view? =
+
+Add this CSS rule into the "Customization area >> Add Custom Styles" (at the bottom of the page that contains the list of calendars):
 
     #multicalendar .rb-i{white-space:normal}
 
-= Q: How to show differents colors in the nMonth view? =
+= How to show differents colors in the nMonth view? =
 
-A: Use the following configuration parameter:
+Use the following configuration parameter:
 
         date_box_with_color_in_nmonth_view:true
 
@@ -114,9 +120,9 @@ The "Other Parameters" box can be found in the following location (link to image
 
 https://wordpress.dwbooster.com/UserFiles/Image/cp-multiview-calendar/additional-parameters.gif
 
-= Q: How to allow edition on the public calendar only for some registered users? =
+= 👥 How to allow edition on the public calendar only for some registered users? =
 
-A: If you want to setup the calendar editable only by some users in the public website then publish a view of the calendar in a private page (restrict the access to the page with the calendar with "Edition" enabled).
+If you want to setup the calendar editable only by some users in the public website then publish a view of the calendar in a private page (restrict the access to the page with the calendar with "Edition" enabled).
 
 You can have multiple views of the same event calendar, one for read-only public access and another view with edition enabled on a private page accessible only by registered users.
 
@@ -127,15 +133,15 @@ Note that there are two different concepts here:
 
 See also this other FAQ entry about additional permissions settings: https://wordpress.dwbooster.com/faq/cp-multi-view-calendar#q205
 
-= Q: How show the entire title on month,week and day view on the event calendar? =
+= How show the entire title on month,week and day view on the event calendar? =
 
-A: Add this CSS rule  into the "Customization area >> Add Custom Styles" (at the bottom of the page that contains the list of calendars):
+Add this CSS rule  into the "Customization area >> Add Custom Styles" (at the bottom of the page that contains the list of calendars):
 
         #multicalendar .rb-i{white-space:normal}
 
-= Q: Can I change the event calendar plugin date format to DD/MM/YYYY? =
+= Can I change the event calendar plugin date format to DD/MM/YYYY? =
 
-A: The date format is automatically defined with each language to the proper values, however if you want to overwrite those settings open your plugin language file "wp-content\plugins\cp-multi-view-calendar\DC_MultiViewCal\language\multiview_lang_**xx-XX**.js", where **xx-XX** in the file name is your language identifier and into that file modify the items marked below:
+The date format is automatically defined with each language to the proper values, however if you want to overwrite those settings open your plugin language file "wp-content\plugins\cp-multi-view-calendar\DC_MultiViewCal\language\multiview_lang_**xx-XX**.js", where **xx-XX** in the file name is your language identifier and into that file modify the items marked below:
 
         "fulldaykey": "MMddyyyy",
         "fulldayshow": "L d yyyy",
@@ -162,9 +168,12 @@ A: The date format is automatically defined with each language to the proper val
         "day_index": 0,
 
 
+
+
+
 == Other Notes ==
 
-= Settings in the insertion area =
+### 📅 Calendar Insertion Settings
 
 To insert the calendar form into some content or post use the insertion area that will appear below the editor when editing contents. It looks like the following image: 
 
@@ -184,17 +193,17 @@ The fields on the event calendar insertion area (shown in the above image) are t
 * Other parameters for nMonths View: Other parameters for the nMonths View (more info below).
 * Other parameters: Other parameters that apply to all calendar views (more info below).
 
-= Adding custom parameters = 
+### 💡 Advanced Customization
 
 The additional parameters should be added into the "Other Parameters" box in the event calendar insertion area. These parameters must be comma separated and will overwrite the initial configuration selected for the event calendar. 
 
 The "Other Parameters" box can be found in the following location (click to enlarge image): https://wordpress.dwbooster.com/demos/multi-view/screenshots/additional-parameters.png
 
-= Adding custom CSS Styles = 
+### 🎨 Adding custom CSS Styles
 
 The custom CSS styles can be added into the "Customization area >> Add Custom Styles" (at the bottom of the page that contains the list of calendars). 
 
-= Sample calendar views = 
+### 🧩 Calendar View Examples
 
 The following area some sample views. You can apply or mix configurations to get your own calendar views in addition to the following samples:
 
@@ -252,6 +261,12 @@ The following area some sample views. You can apply or mix configurations to get
 
 
 == Changelog ==
+
+= 1.4.34 =
+* Compatible with WP 6.9
+
+= 1.4.33 =
+* Multiple Event Calendar improvements
 
 = 1.4.32 =
 * Compatible with WordPress 6.8
@@ -962,5 +977,5 @@ The following area some sample views. You can apply or mix configurations to get
 
 == Upgrade Notice ==
 
-= 1.4.32 =
-* Compatible with WordPress 6.8
+= 1.4.34 =
+* Compatible with WP 6.9

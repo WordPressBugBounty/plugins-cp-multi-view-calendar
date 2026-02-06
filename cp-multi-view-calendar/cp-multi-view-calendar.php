@@ -1,12 +1,12 @@
 <?php
 /*
-Plugin Name: Calendar Event Multi View
+Plugin Name: CP Multi View Events Calendar
 Plugin URI: https://wordpress.dwbooster.com/calendars/cp-multi-view-calendar
 Description: This plugin allows you to insert event calendars into your WP website.
-Version: 1.4.32
+Version: 1.4.34
 Author: CodePeople
 Author URI: https://wordpress.dwbooster.com/calendars/cp-multi-view-calendar
-License: GPL
+License: GPLv2
 Text Domain: cp-multi-view-calendar
 */
 
@@ -69,7 +69,7 @@ add_shortcode( $cp_mvc_plugin->shorttag, array($cp_mvc_plugin, 'filter_content')
 
 $codepeople_promote_banner_plugins[ 'cp-multi-view-event-calendar' ] = array( 
                       'plugin_name' => 'CP Multi View Calendar', 
-                      'plugin_url'  => 'https://wordpress.org/support/plugin/cp-multi-view-calendar/reviews/?filter=5#new-post'
+                      'plugin_url'  => 'https://wordpress.org/support/plugin/cp-multi-view-calendar/reviews/?#new-post'
 );
 require_once 'banner.php';
 

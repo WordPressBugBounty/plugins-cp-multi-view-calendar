@@ -191,9 +191,9 @@ echo '<div>
     <tr>
         <td></td>
         <td align="left">
-            <input type="button" onclick="return <?php echo esc_attr($this->prefix); ?>saveCloseCalendar(this.form);" value="<?php echo esc_attr (__('Save Calendar')); ?>" />
-            <input type="button" onclick="return <?php echo esc_attr($this->prefix); ?>previewCalendar(this.form);" value="<?php echo esc_attr (__('Save & Preview')); ?>" />
-            &nbsp; <input type="button" onclick="return <?php echo esc_attr($this->prefix); ?>showCalendarArea();" value="<?php echo esc_attr (__('Cancel')); ?>" />
+            <input type="button" onclick="return <?php echo esc_attr($this->prefix); ?>saveCloseCalendar(this.form);" value="<?php echo esc_attr (__('Save Calendar', 'cp-multi-view-calendar')); ?>" />
+            <input type="button" onclick="return <?php echo esc_attr($this->prefix); ?>previewCalendar(this.form);" value="<?php echo esc_attr (__('Save & Preview', 'cp-multi-view-calendar')); ?>" />
+            &nbsp; <input type="button" onclick="return <?php echo esc_attr($this->prefix); ?>showCalendarArea();" value="<?php echo esc_attr (__('Cancel', 'cp-multi-view-calendar')); ?>" />
         </td>
     </tr>    
 </table>
@@ -201,7 +201,7 @@ echo '<div>
 <div id="<?php echo esc_attr($this->prefix); ?>calendarsarea">
   <div id="<?php echo esc_attr($this->prefix); ?>calendarslistarea"></div>  
   <br />
-  <input type="button" onclick="return <?php echo esc_attr($this->prefix); ?>createNewCalendar(0);" value="<?php echo esc_attr (__('Create New Calendar View')); ?>" />  
+  <input type="button" onclick="return <?php echo esc_attr($this->prefix); ?>createNewCalendar(0);" value="<?php echo esc_attr (__('Create New Calendar View', 'cp-multi-view-calendar')); ?>" />  
   
   <p>Note: To add events to the calendar go to the "<a href="admin.php?page=<?php echo esc_attr($this->menu_parameter); ?>_manage">WordPress administration menu >> CP Multiview Calendar</a>" and on that page click the "<strong>Admin Calendar Data</strong>" button that leads to a page where you can add/edit/delete events on the calendar (just click over the desired dates).</p>
 </div> 
@@ -262,7 +262,7 @@ echo '<div>
 	  	    params: code
 	  	    // falta mandar parametro ID para caso de update
      	};
-     	$j("#<?php echo esc_js($this->prefix); ?>calendarslistarea")[0].innerHTML = '<?php esc_js(__("Loading...")); ?>';
+     	$j("#<?php echo esc_js($this->prefix); ?>calendarslistarea")[0].innerHTML = '<?php esc_js(__("Loading...", 'cp-multi-view-calendar')); ?>';
      	$j.ajax({
                 type: 'POST',
                 url: ajaxurl,
@@ -294,7 +294,7 @@ echo '<div>
             security: '<?php echo esc_js($this->ajax_nonce); ?>',
 	  	    id: viewid
      	};
-     	$j("#<?php echo esc_js($this->prefix); ?>calendarslistarea")[0].innerHTML = '<?php esc_js(__("Loading...")); ?>';     	
+     	$j("#<?php echo esc_js($this->prefix); ?>calendarslistarea")[0].innerHTML = '<?php esc_js(__("Loading...", 'cp-multi-view-calendar')); ?>';     	
         $j.post(ajaxurl, data, function(response) {
             try {
 		        $j("#<?php echo esc_js($this->prefix); ?>calendarslistarea")[0].innerHTML = response;		  		    
@@ -352,7 +352,7 @@ echo '<div>
         action: '<?php echo esc_js($this->prefix); ?>get_views',
         security: '<?php echo esc_js($this->ajax_nonce); ?>'
     };
-    $j("#<?php echo esc_js($this->prefix); ?>calendarslistarea")[0].innerHTML = '<?php esc_js(__("Loading...")); ?>';
+    $j("#<?php echo esc_js($this->prefix); ?>calendarslistarea")[0].innerHTML = '<?php esc_js(__("Loading...", 'cp-multi-view-calendar')); ?>';
     $j.post(ajaxurl, data, function(response) {     
           try {
 		      $j("#<?php echo esc_js($this->prefix); ?>calendarslistarea")[0].innerHTML = response;		  

@@ -14,7 +14,7 @@ $nonce = wp_create_nonce( 'cpmvc_update_actions_adminlist' );
 
 global $wpdb;
 $message = "";
-if (isset($_GET['u']) && $_GET['u'] != '' && wp_verify_nonce( sanitize_text_field($_GET['nonce']), 'cpmvc_update_actions_adminlist'))
+if (isset($_GET['u']) && $_GET['u'] != '' && isset($_GET["name"]) && wp_verify_nonce( sanitize_text_field($_GET['nonce']), 'cpmvc_update_actions_adminlist'))
 {
     $wpdb->query( $wpdb->prepare( 'UPDATE `'.$wpdb->prefix.'dc_mv_calendars` SET title=%s,published=%d,owner=%s WHERE id=%d',sanitize_text_field($_GET["name"]), intval($_GET["public"]), sanitize_text_field($_GET["owner"]), intval($_GET['u']) ) );
     $message = "Item updated";
