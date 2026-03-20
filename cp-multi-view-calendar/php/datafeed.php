@@ -177,6 +177,14 @@ function addDetailedCalendar($calid, $st, $et, $sub, $ade, $dscr, $loc, $color, 
   global $wpdb;
   $ret = array();
 
+  $sub = sanitize_text_field ($sub);
+  $ade = sanitize_text_field ($ade);
+  $loc = sanitize_text_field ($loc);
+  $color = sanitize_text_field ($color);
+  $tz = sanitize_text_field ($tz);
+  $dscr = wp_kses_post($dscr);
+  
+
   $user = wp_get_current_user();
   try{
     if (checkIfOverlapping($calid, $st, $et,$sub, $ade, $loc,0))
@@ -403,7 +411,16 @@ function updateCalendar($id, $st, $et){
 function updateDetailedCalendar($id, $st, $et, $sub, $ade, $dscr, $loc, $color, $rrule,$rruleType,$tz){
   global $wpdb;
   $ret = array();  
-  $calid = intval($_GET['calid']);
+  $calid = intval($_GET['calid']);  
+  
+
+  $sub = sanitize_text_field ($sub);
+  $ade = sanitize_text_field ($ade);
+  $loc = sanitize_text_field ($loc);
+  $color = sanitize_text_field ($color);
+  $tz = sanitize_text_field ($tz);
+  $dscr = wp_kses_post($dscr);
+  
   try{ 
     if (checkIfOverlapping($calid, $st, $et,$sub,$ade,$loc,$id))
     { 
