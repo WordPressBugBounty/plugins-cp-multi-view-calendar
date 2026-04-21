@@ -20,7 +20,7 @@ switch ($method) {
     case "add":
         check_ajax_referer( "cp_multiviewmain", 'security' );
         confirmEditionAccess();       
-        $ret = addCalendar($calid, $this->get_param("CalendarStartTime"), $this->get_param("CalendarEndTime"), wp_unslash ($this->get_param("CalendarTitle")), $this->get_param("IsAllDayEvent"), wp_unslash(sanitize_text_field($this->get_param("location"))));
+        $ret = addCalendar($calid, sanitize_text_field($this->get_param("CalendarStartTime")), sanitize_text_field($this->get_param("CalendarEndTime")), sanitize_text_field(wp_unslash ($this->get_param("CalendarTitle"))), sanitize_text_field($this->get_param("IsAllDayEvent")), wp_unslash(sanitize_text_field($this->get_param("location"))));
         break;
     case "list":
         if ('list' == $_POST["viewtype"])
@@ -38,27 +38,28 @@ switch ($method) {
     case "update":
         check_ajax_referer( "cp_multiviewmain", 'security' );
         cpmvc_confirm_basic();
-        $ret = updateCalendar( intval($this->get_param("calendarId")), $this->get_param("CalendarStartTime"), $this->get_param("CalendarEndTime"));
+        $ret = updateCalendar( intval($this->get_param("calendarId")), sanitize_text_field($this->get_param("CalendarStartTime")), sanitize_text_field($this->get_param("CalendarEndTime")));
         break;
     case "remove":
         check_ajax_referer( "cp_multiviewmain", 'security' );
         cpmvc_confirm_basic();
-        $ret = removeCalendar( intval($this->get_param("calendarId")),$this->get_param("rruleType"));
+        $ret = removeCalendar( intval($this->get_param("calendarId")), sanitize_text_field($this->get_param("rruleType")));
         break;
     case "adddetails":
         check_ajax_referer( "cp_multiviewmain", 'security' );
         cpmvc_confirm_basic();
-        $st = $this->get_param("stpartdatelast") . " " . $this->get_param("stparttimelast");
-        $et = $this->get_param("etpartdatelast") . " " . $this->get_param("etparttimelast");
+        $st = sanitize_text_field($this->get_param("stpartdatelast") . " " . $this->get_param("stparttimelast"));
+        $et = sanitize_text_field($this->get_param("etpartdatelast") . " " . $this->get_param("etparttimelast"));
         if($this->get_param("id")!=""){
 
             $ret = updateDetailedCalendar(intval($this->get_param("id")), $st, $et,
-                sanitize_text_field(wp_unslash($this->get_param("Subject"))), ($this->get_param("IsAllDayEvent")==1)?1:0, wp_unslash($this->get_param('Description')) ,
-                wp_unslash(sanitize_text_field($this->get_param("Location"))), $this->get_param("colorvalue"), $this->get_param("rrule"),$this->get_param("rruleType"), $this->get_param("timezone"));
+                sanitize_text_field(wp_unslash($this->get_param("Subject"))), 
+                ($this->get_param("IsAllDayEvent")==1)?1:0, wp_unslash($this->get_param('Description')) ,
+                wp_unslash(sanitize_text_field($this->get_param("Location"))), sanitize_text_field($this->get_param("colorvalue")), sanitize_text_field($this->get_param("rrule")),sanitize_text_field($this->get_param("rruleType")), sanitize_text_field($this->get_param("timezone")));
         }else{
 
             $ret = addDetailedCalendar($calid, $st, $et,sanitize_text_field(wp_unslash($this->get_param("Subject"))), ($this->get_param("IsAllDayEvent")==1)?1:0, wp_unslash($this->get_param('Description')) ,
-                wp_unslash(sanitize_text_field($this->get_param("Location"))), $this->get_param("colorvalue"), $this->get_param("rrule"),0, $this->get_param("timezone"));
+                wp_unslash(sanitize_text_field($this->get_param("Location"))), sanitize_text_field($this->get_param("colorvalue")), sanitize_text_field($this->get_param("rrule")),0, sanitize_text_field($this->get_param("timezone")));
         }
         break;
 
