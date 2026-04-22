@@ -4,7 +4,7 @@ Donate link: https://wordpress.dwbooster.com/calendars/cp-multi-view-calendar
 Tags: calendar,calendars,event calendar,event,event manager
 Requires at least: 3.0.5
 Tested up to: 6.9
-Stable tag: 1.4.36
+Stable tag: 1.4.37
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -261,6 +261,9 @@ The following area some sample views. You can apply or mix configurations to get
 
 
 == Changelog ==
+
+= 1.4.37 =
+* Access levels modified
 
 = 1.4.36 =
 * Better data cleaning
@@ -983,5 +986,5 @@ The following area some sample views. You can apply or mix configurations to get
 
 == Upgrade Notice ==
 
-= 1.4.36 =
-* Better data cleaning
+= 1.4.37 =
+* Access levels modified
