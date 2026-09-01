@@ -2686,8 +2686,44 @@
             if (d=="") d = option.theme;
             return [d,d,d,d];
         }
+        function htmlEscape(str) {
+            if (typeof str !== "string") {
+                str = String(str);
+            }
+            return str
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#39;");
+        }
         function Tp(temp, dataarry) {
-            return temp.replace(/\$\{([\w]+)\}/g, function(s1, s2) { var s = dataarry[s2]; if (typeof (s) != "undefined") { return s; } else { return s1; } });
+            // Keys that intentionally contain HTML markup in wdCalendar.
+            // These will bypass HTML escaping to preserve UI layout.
+            var safeKeys = {
+                'icon': true,
+                'html': true,
+                'edit_link': true,
+                'delete_link': true,
+                'extendHTML': true,
+                'content': true,      // Contains nested <span> and <I> tags
+                'description': true,  // List view constructs <div class="description_short">
+                'otherAttr': true     // Contains structural attributes like colSpan='x'
+            };
+
+            return temp.replace(/\$\{([\w]+)\}/g, function(s1, s2) {
+                var s = dataarry[s2];
+                if (typeof (s) != "undefined") {
+                    // Bypass escaping for intentional structural HTML
+                    if (safeKeys[s2]) {
+                        return s; 
+                    }
+                    // HTML-escape everything else (especially 'title', 'data', 'location')
+                    return htmlEscape(s);
+                } else {
+                    return s1;
+                }
+            });
         }
         function Ta(temp, dataarry) {
             return temp.replace(/\{([\d])\}/g, function(s1, s2) { var s = dataarry[s2]; if (typeof (s) != "undefined") { return encodeURIComponent(s); } else { return ""; } });
